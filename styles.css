@@ -1,0 +1,479 @@
+:root {
+  --main-color: #1e54f7;
+  --secondary-color: #222;
+  --secondary-background: #f3f4f7;
+  --main-background: #e0d2d2;
+  --second-color: #005670;
+  --nav-background: rgba(0, 0, 0, 0.8);
+  --main-font-color: #000000;
+  --secondary-font-color: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+  font-family: "Raleway", "sans-serif";
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* todos los elementos heredan el box-sizing */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /*lo que se desborda en horizontal se oculta*/
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-background);
+  color: var(--main-font-color);
+}
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  background-color: var(--main-color);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+}
+
+.cabecera h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.section-impar {
+  background-color: var(--main-background);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.section-par {
+  background-color: var(--secondary-background);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* **************Menu Hamburguesa*********** */
+
+.nav {
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--nav-background);
+  overflow-x: hidden;
+  transition: 0.8s;
+  padding-top: 60px;
+  text-align: center;
+  z-index: 998;
+}
+
+.nav ul {
+  padding: 0;
+}
+
+.nav ul li {
+  list-style: none;
+  margin-right: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: var(--secondary-font-color);
+  font-size: 24px;
+  padding: 1rem;
+  display: block;
+  font-weight: bold;
+}
+
+.nav ul li a:hover {
+  background-color: var(--main-color);
+  opacity: 0.8;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.secciones {
+  top: 0;
+}
+
+.secciones div {
+  text-align: center;
+}
+
+/* #btn-hamburger {
+  position: relative;
+} */
+
+.hamburger {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
+  position: fixed;
+  background-color: var(--main-color) !important;
+  border-radius: 50%;
+  z-index: 999;
+  color: var(--secondary-color);
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+/************* Reloj **********/
+.reloj {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.botones {
+  padding: 2rem;
+}
+
+.botones button {
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+/*********** Eventos Teclado ***********/
+
+#direcciones ul li {
+  list-style: none;
+  font-size: 2rem;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.camp {
+  width: 80%;
+  height: 30vw;
+  background-color: var(--second-color);
+  border: solid 5px var(--secondary-color);
+  margin: auto;
+  position: relative;
+  z-index: 990;
+}
+
+.ball {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: absolute;
+  opacity: 0.5;
+}
+
+#alertas ul li {
+  font-weight: bold;
+  list-style: none;
+  display: inline-block;
+  margin: 2rem;
+}
+
+#alertas ul li code {
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--secondary-font-color);
+}
+
+/* ***********Button scroll********** */
+.scroll {
+  width: 5rem;
+  height: 5rem;
+  bottom: 1vh;
+  right: calc(5.25rem + 1vw);
+  position: fixed;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  border: none;
+  z-index: 998;
+  opacity: 0;
+  transform: translate(0, 20vh);
+  transition: all 1s;
+  cursor: pointer;
+  outline: 0;
+}
+
+.scroll span {
+  font-size: 2rem;
+}
+
+.scroll.visible {
+  opacity: 1;
+  transform: translate(0, 0vh);
+}
+
+.scroll:hover {
+  opacity: 0.8;
+}
+
+/* **********DARK MODE********** */
+.btn-dark {
+  width: 5rem;
+  height: 5rem;
+  bottom: 1vh;
+  left: 1vh;
+  position: fixed;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  border: none;
+  z-index: 998;
+  cursor: pointer;
+  font-size: 2rem;
+  outline: 0;
+  color: var(--secondary-color);
+}
+
+.btn-dark:hover {
+  opacity: 0.8;
+}
+
+.is-dark-mode {
+  --main-color: #262b3e;
+  --secondary-color: #f0f3fa;
+  --main-background: #1d2029;
+  --secondary-background: #212637;
+  --second-color: #005670;
+  --nav-background: rgba(128, 136, 173, 0.8);
+  --main-font-color: #f8f9fe;
+  --secondary-font-color: #262b3e;
+}
+
+/* **********responsive Tester********** */
+#formulario {
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#formulario input[type="text"],
+input[type="number"],
+input[type="url"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#formulario button {
+  width: 40%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-submit {
+  background-color: #4caf50;
+}
+
+/* #formulario button[type="submit"]:hover { */
+.btn-submit:hover {
+  background-color: #45a049;
+}
+
+.btn-close {
+  background-color: #d12a0b;
+}
+
+/* **********Conexion y Desconexion********** */
+.on-line {
+  width: 100%;
+  height: 80px;
+  background-color: #4caf50;
+  color: var(--secondary-font-color);
+  z-index: 998;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(0, -200vh);
+  transition: all 2s;
+}
+
+.on-line.visible {
+  opacity: 1;
+  transform: translate(0, 0vh);
+}
+
+.off-line {
+  width: 100%;
+  height: 80px;
+  background-color: #d12a0b;
+  color: var(--secondary-font-color);
+  z-index: 998;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(0, -200vh);
+  transition: all 2s;
+}
+
+.off-line.visible {
+  opacity: 1;
+  transform: translate(0, 0vh);
+}
+
+/* **********Acceder a Camara Web********** */
+#snap {
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--secondary-font-color);
+  background-color: #4caf50;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+#cam-video {
+  display: none;
+}
+
+/* **********filtro de busqueda********** */
+#input-busqueda {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#reset {
+  /* padding: 0.2rem; */
+  font-weight: bold;
+  margin-left: -40px;
+}
+
+.cards {
+  padding: 1rem;
+}
+
+.card {
+  display: inline-block;
+  background: var(--second-color);
+  color: var(--secondary-font-color);
+}
+
+.card figcaption {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.filter {
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
+}
+
+/* **********Sorteo Digital********** */
+.sorteo {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-font-color);
+  background-color: #4caf50;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+#listado {
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  padding: 0;
+}
+
+/* **********Scroll Spy********** */
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 6rem auto;
+    grid-template-areas:
+      "header header"
+      "section nav";
+  }
+
+  .cabecera {
+    grid-area: header;
+  }
+
+  .nav {
+    grid-area: nav;
+    height: initial;
+    top: 6rem !important;
+    position: sticky;
+    transform: translateX(0);
+    background-color: var(--secondary-color);
+    display: flex;
+    align-self: start;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .nav ul li a {
+    font-size: 1rem;
+    padding: 0.75rem;
+    text-align: right;
+  }
+
+  .nav ul li a:hover,
+  .nav ul li a.active {
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+  }
+
+  #btn-hamburger {
+    display: none;
+  }
+
+  .scroll {
+    right: initial;
+    left: calc(5.25rem + 1vw);
+  }
+
+  section {
+    grid-area: section;
+  }
+}
