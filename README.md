@@ -1,1 +1,1 @@
-# HomeworkS jon mircha
+# Homeworks Javascript, Learning with Jon Mircha
