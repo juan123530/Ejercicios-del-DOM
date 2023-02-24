@@ -1,24 +1,3 @@
-//  export default function hamburger(panelBtn,panel,menuLink){
-// const d = document;
-
-// d.addEventListener("click", (e)=>{
-//   if(e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)){
-//     d.querySelector(panel).classList.toggle("is-active");
-//     d.querySelector(panelBtn).classList.toggle("is-active");
-//   }
-
-//   if(e.target.matches(menuLink)){
-//     d.querySelector(panel).classList.remove("is-active");
-//     d.querySelector(panelBtn).classList.remove("is-active");
-//   }
-// });
-// 
-
-// export function hamburger();
-// export function relojAlarma(btnStarReloj, btnStopReloj, btnStarAlarma, btnStopAlarma);
-// export function reloj();
-// export function mover(camp, ball);
-// export function alertas();`
 
 function hamburger() {
   const $btnHamburger = document.querySelector(".hamburger"),
@@ -482,18 +461,19 @@ function digitalGiveaway(btn, listado) {
   console.log($pListado);
 
   const teams = [
-    "suba",
-    "paloquemado",
-    "cedritos",
-    "soacha",
-    "los martires",
-    "bosa",
-    "santa ana",
-    "prado veraniego",
-    "codito",
-    "tierragrata",
-    "fontibon",
-    "modelia",
+    "Andres zuares",
+    "Cristina Pabon",
+    "Jonathan Gonzalez",
+    "Sara Rios",
+    "Diego Fernandez",
+    "Brayan Gonzalez",
+    "Ana sanchez",
+    "Francisco Gonzalez",
+    "Felipe williams",
+    "Tahoma de ermes",
+    "Fabian Telles",
+    "Martha Pineda",
+    "Juan Pineda",
   ];
 
   teams.forEach((team) => {
