@@ -16,4 +16,3 @@
         <li><a href="#section-11" data-scroll-spy>Responsive Slider</a></li>
         <li><a href="#section-12" data-scroll-spy>Smart video</a></li>    
       </ul>
-      ![image](https://user-images.githubusercontent.com/117276310/221064231-1512c337-a89e-4ca6-b186-5a351b7f68e4.png)
