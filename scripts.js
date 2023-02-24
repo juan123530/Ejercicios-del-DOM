@@ -1,4 +1,3 @@
-
 function hamburger() {
   const $btnHamburger = document.querySelector(".hamburger"),
     $nav = document.querySelector(".nav");
@@ -314,11 +313,11 @@ function userDeviceInfo(id) {
 
   // **************contenido Exclusivo***********
   if (isBrowser.chrome()) {
-    $id.innerHTML += `<p><mark>Logramos detectar que esras usando Chrome</mark></p>`;
+    $id.innerHTML += `<p><mark>Logramos detectar que estas usando Chrome</mark></p>`;
   }
 
   if (isBrowser.firefox()) {
-    $id.innerHTML += `<p><mark>Logramos detectar que esras usando Firefox</mark></p>`;
+    $id.innerHTML += `<p><mark>Logramos detectar que estas usando Firefox</mark></p>`;
   }
 
   if (isDesktop.linux()) {
@@ -489,7 +488,11 @@ function digitalGiveaway(btn, listado) {
 
       setTimeout(() => {
         const win = Math.floor(Math.random() * teams.length);
-        swal(`${teams[win]} Campeón`, `El Ganador Es ${teams[win]}`, "success");
+        swal(
+          `${teams[win]} en buena hora!`,
+          `Tendras que invitar cafe ${teams[win]}`,
+          "success"
+        );
         $spiner.style.display = "none";
         $pListado.style.visibility = "visible";
       }, 2000);
@@ -553,7 +556,7 @@ function videoInteligent(video) {
 
   observer.observe($video);
 }
- 
+
 document.addEventListener("DOMContentLoaded", (e) => {
   hamburger();
   relojAlarma(

@@ -1,7 +1,7 @@
 :root {
-  --main-color: #1e54f7;
+  --main-color: #1044e0;
   --secondary-color: #222;
-  --secondary-background: #f3f4f7;
+  --secondary-background: #f3f4f7da;
   --main-background: #e0d2d2;
   --second-color: #005670;
   --nav-background: rgba(0, 0, 0, 0.8);
@@ -355,7 +355,7 @@ input[type="url"] {
   padding: 1rem;
   font-weight: bold;
   color: var(--secondary-font-color);
-  background-color: #4caf50;
+  background-color: #2b862e;
   border: none;
   border-radius: 0.2rem;
   cursor: pointer;
